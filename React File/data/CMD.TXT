@@ -1,0 +1,31 @@
+GET:-
+localhost:8080/engine-rest/external-task?processInstanceBusinessKey=LMS
+
+
+POST http://localhost:8080/engine-rest/external-task/fetchAndLock
+Content-Type: application/json
+
+{
+  "workerId": "my-worker-1",
+  "maxTasks": 1,
+  "usePriority": true,
+  "topics": [
+    {
+      "topicName": "notify-verification",
+      "lockDuration": 10000
+    }
+  ]
+}
+
+
+
+
+POST http://localhost:8080/engine-rest/external-task/b44fe203-84bb-11f0-9a2a-00ff7240405f/complete
+Content-Type: application/json
+
+{
+  "workerId": "my-worker-1",
+  "variables": {
+    "verificationApproved": {"value": true, "type": "Boolean"}
+  }
+}
