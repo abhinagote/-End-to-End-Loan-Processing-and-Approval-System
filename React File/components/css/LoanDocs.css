@@ -1,0 +1,152 @@
+/* ===== LoanDocs Page Container ===== */
+.loan-docs-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 40px 50px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Title ===== */
+.loan-docs-container h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1f2937;
+}
+
+/* ===== Section Container ===== */
+.loan-section {
+  border: 1px solid #d1d5db;
+  padding: 25px;
+  border-radius: 12px;
+  background: #f9fafb;
+  margin-bottom: 30px;
+  transition: all 0.2s ease;
+}
+
+.loan-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* ===== Section Heading ===== */
+.loan-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* ===== Document Upload Grid ===== */
+.loan-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Each Document Field ===== */
+.loan-doc {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-doc label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.loan-doc input[type="file"] {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loan-doc input[type="file"]:hover {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== Submit Button ===== */
+.loan-submit-btn {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 20px;
+}
+
+.loan-submit-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* ===== Start Process Button ===== */
+.start-btn {
+  width: 100%;
+  background: #16a34a; /* green */
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.start-btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* ===== Verify Button ===== */
+.verify-btn {
+  width: 100%;
+  background: #f59e0b; /* amber */
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.verify-btn:hover {
+  background: #b45309;
+  transform: translateY(-2px);
+}
+
+/* ===== Status Messages ===== */
+.success-text {
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.error-text {
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}

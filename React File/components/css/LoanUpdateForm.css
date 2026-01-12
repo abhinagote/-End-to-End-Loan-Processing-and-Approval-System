@@ -1,0 +1,102 @@
+/* ====== Design tokens ====== */
+:root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --surface: #ffffff;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #e11d48;
+  --danger-hover: #be123c;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --focus: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* ====== Form container ====== */
+.loan-form-container {
+  max-width: 800px;
+  margin: 100px auto 40px;
+  padding: 24px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.loan-form-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+/* ====== Form grid ====== */
+.loan-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 16px 24px;
+}
+
+.loan-form-grid label {
+  grid-column: span 2; /* labels full width */
+  font-weight: 600;
+}
+
+.loan-form-grid input,
+.loan-form-grid select {
+  grid-column: span 2; /* default full width */
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.loan-form-grid input:focus,
+.loan-form-grid select:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus);
+}
+
+/* Half-width fields (side by side) */
+.loan-form-grid input.half-width,
+.loan-form-grid select.half-width {
+  grid-column: span 1;
+}
+
+/* ====== Submit button ====== */
+.submit-btn {
+  grid-column: span 2; /* spans both columns */
+  padding: 12px 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  transition: background 0.2s, transform 0.05s;
+}
+
+.submit-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .loan-form-grid {
+    grid-template-columns: 1fr; /* stack all fields */
+  }
+
+  .loan-form-grid input,
+  .loan-form-grid select,
+  .submit-btn {
+    grid-column: span 1;
+  }
+}

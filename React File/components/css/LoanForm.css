@@ -1,0 +1,174 @@
+/* ====== Form container ====== */
+.loan-form-container {
+  margin: 80px auto; /* balanced top & bottom spacing */
+  padding: 40px 35px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* ⬆️ increased width */
+  min-height: 80vh; /* ⬆️ taller container */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.loan-form-container h2 {
+  text-align: center;
+  font-size: 2rem; /* ⬆️ larger title */
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
+}
+
+/* ====== Grid layout ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 25px;
+  flex-grow: 1;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Add asterisk to mandatory fields */
+.form-group label.required::after {
+  content: " *";
+  color: #e74c3c;
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+/* Inputs & Selects */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fafafa;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+  background-color: #fff;
+}
+
+/* Error highlighting */
+.input-error {
+  border-color: #e74c3c !important;
+  background-color: #fdecea;
+}
+
+/* Dropdown custom arrow */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%232c3e50' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  color: #2c3e50;
+}
+
+/* Options */
+.form-group select option {
+  padding: 12px;
+  font-size: 15px;
+  color: #2c3e50;
+  background-color: #fff;
+}
+
+/* ====== Buttons ====== */
+.button-group {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.save-btn,
+.submit-btn,
+.start-btn,
+.close-btn {
+  width: 180px;        /* ⬆️ bigger button */
+  height: 50px;        /* ⬆️ taller button */
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* Button colors */
+.save-btn { background: #f39c12; }
+.save-btn:hover { background: #d68910; transform: scale(1.05); }
+
+.submit-btn { background: #27ae60; }
+.submit-btn:hover { background: #1e8449; transform: scale(1.05); }
+
+.start-btn { background: #2980b9; }
+.start-btn:hover { background: #21618c; transform: scale(1.05); }
+
+.close-btn { background: #e74c3c; }
+.close-btn:hover { background: #c0392b; transform: scale(1.05); }
+
+/* ====== Application number text ====== */
+.loan-form-container p {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 17px;
+  color: #16a085;
+  font-weight: bold;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1200px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .loan-form-container {
+    padding: 25px 18px;
+    min-height: auto;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .save-btn,
+  .submit-btn,
+  .start-btn,
+  .close-btn {
+    width: 100%; /* full width on mobile */
+  }
+}

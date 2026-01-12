@@ -1,0 +1,50 @@
+.external-tasks {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.external-tasks h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls,
+.task-dropdown {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.controls input,
+.task-dropdown select {
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  flex: 1;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.status-msg {
+  font-weight: 600;
+  color: #111827;
+}
